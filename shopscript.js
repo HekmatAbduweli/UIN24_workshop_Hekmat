@@ -13,7 +13,7 @@ products.map(
 </article>`)
 );
 
-console.log(productsHTML);
+//console.log(productsHTML)
 
 const main = document.getElementsByTagName("main");
 main[0].innerHTML = productsHTML;
