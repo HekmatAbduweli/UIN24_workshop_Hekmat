@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblig 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+        body {
+            font-family: monospace, sans-serif;
+            background-color: #E1E5EE;
+            color: #2A324B;
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            max-width: 1300px;
+            width: 100%;
+            margin-top: 10rem;
+        }
+
+        #list-type {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            justify-content: space-between;
+            margin: 0;
+        }
+
+        .buttonList.active{
+            background-color: #fff;
+            color: #2A324B;
+        }
+
+        button {
+            border: none;
+            background-color: #2A324B;
+            padding: 1.5rem 4.2rem;
+            text-align: center;
+            color: #fff;
+            width: auto;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: monospace, sans-serif;
+            font-weight: 600;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 5rem 2rem;
+            justify-content: center;
+            font-size: large;
+        }
+
+        main article{
+            margin: auto;
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+     <div>
+        <header>
+            <ul id="list-type">
+                <li><button class="buttonList HTML active" onclick="elementFilter(0)">HTML</button></li>
+                <li><button class="buttonList CSS" onclick="elementFilter(1)">CSS</button></li>
+                <li><button class="buttonList Js" onclick="elementFilter(2)">JavaScript</button></li>
+                <li><button class="buttonList React" onclick="elementFilter(3)">React</button></li>
+                <li><button class="buttonList Sanity" onclick="elementFilter(4)">Sanity and headless CMS</button></li>
+            </ul>
+        </header>
+        <main>
+            <article>
+                <h3 id="h3"></h3>
+                <span id="span"></span>
+                <ul id="list">
+                </ul>
+            </article>
+        </main>
+
+    </div>
+
+
+
+    <script src="ressurser.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
