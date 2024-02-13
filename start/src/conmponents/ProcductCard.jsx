@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function ProductCard({
   category,
   img,
@@ -14,6 +14,11 @@ export default function ProductCard({
     price: price,
     prodid: prodid,
   });
+
+  useEffect(() => {
+    countProducts();
+  }, [cart]);
+
   const handleClick = () => {
     const exist = cart.find((item) => item.prodid === product.prodid);
     setCart((prevCart) =>
@@ -25,16 +30,15 @@ export default function ProductCard({
           )
         : [...prevCart, { ...product, quantity: 1 }]
     );
-    countProducts();
   };
 
   const countProducts = () => {
-    setAmount(cart.reduce((total, item) => total + item.quantity, 1));
+    setAmount(cart.reduce((total, item) => total + item.quantity, 0));
   };
 
   return (
     <article>
-      <img src={"website_images/PROD_" + img} alt={title} />
+      <img src={"/website_images/PROD_" + img} alt={title} />
       <a href="#">{category}</a>
       <h3>{title}</h3>
       <span>Kr.{price}</span>
