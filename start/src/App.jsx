@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
-import ContentPage from "./components/ContentPage";
-import Nav from "./components/Nav";
+import ContentPage from "./conmponents/ContentPage";
 import Layout from "./components/Layout";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
